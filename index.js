@@ -130,6 +130,6 @@ function add(name) {
 // Welcome message:
 console.log("%c --- Rover available commands: ---", "color: orange");
 console.log(
-  "%c rover.turn(), rover.move(), rover.location(), path()",
+  "%c rover.turn(), rover.move(), rover.location(), path(), add()",
   "color: orange"
 );
