@@ -121,10 +121,11 @@ class Rover {
     }
   }
 }
+let mars = {};
 
-const roverApollo13 = new Rover("S");
-const starship = new Rover("E");
-const roverFalcon = new Rover("N");
+function add(name) {
+  mars[name] = new Rover(name);
+}
 
 // Welcome message:
 console.log("%c --- Rover available commands: ---", "color: orange");
@@ -132,15 +133,3 @@ console.log(
   "%c rover.turn(), rover.move(), rover.location(), path()",
   "color: orange"
 );
-
-
-
-let Mars = {}
-///document.getElementById('button').onclick = addRover
-
-
-function addRover(name){
-   Mars[name] = new Rover(name)
-}
-
-
