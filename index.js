@@ -1,5 +1,6 @@
 class Rover {
-  constructor() {
+  constructor(name) {
+    this.name = name;
     this.direction = "N";
     this.x = 0;
     this.y = 0;
