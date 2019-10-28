@@ -1,6 +1,6 @@
 class Rover {
-  constructor(direction) {
-    this.direction = direction;
+  constructor() {
+    this.direction = "N";
     this.x = 0;
     this.y = 0;
     this.travellog = [];
@@ -121,12 +121,9 @@ class Rover {
   }
 }
 
-const roverApollo13 = new Rover('S');
-const starship = new Rover('E')
-const roverFalcon = new Rover('N');
-
-
-
+const roverApollo13 = new Rover("S");
+const starship = new Rover("E");
+const roverFalcon = new Rover("N");
 
 // Welcome message:
 console.log("%c --- Rover available commands: ---", "color: orange");
