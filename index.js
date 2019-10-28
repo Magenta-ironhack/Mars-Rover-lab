@@ -1,6 +1,8 @@
+
 class Rover {
-  constructor(direction) {
-    this.direction = direction;
+  constructor(name) {
+    this.name = name  
+    this.direction = "N";
     this.x = 0;
     this.y = 0;
     this.travellog = [];
@@ -119,13 +121,14 @@ class Rover {
       throw Error(`No path provided.`);
     }
   }
+
+
 }
+let mars = {};
 
-const roverApollo13 = new Rover('S');
-const starship = new Rover('E')
-const roverFalcon = new Rover('N');
-
-
+function add(name){
+    mars[name] = new Rover(name)
+}
 
 
 // Welcome message:
