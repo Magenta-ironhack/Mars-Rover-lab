@@ -132,3 +132,15 @@ console.log(
   "%c rover.turn(), rover.move(), rover.location(), path()",
   "color: orange"
 );
+
+
+
+let Mars = {}
+///document.getElementById('button').onclick = addRover
+
+
+function addRover(name){
+   Mars[name] = new Rover(name)
+}
+
+
