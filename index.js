@@ -121,8 +121,18 @@ class Rover {
     }
   }
 
-
 }
+
+let obstacles = [
+    {
+        x: 5,
+        y: 4,
+    }, {
+        x: 3,
+        y: 2,
+    }
+]
+
 let mars = {};
 
 function add(name){
