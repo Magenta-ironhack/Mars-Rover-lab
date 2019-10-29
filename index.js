@@ -1,6 +1,6 @@
 
   
-  class Rover {
+class Rover {
     constructor() {
       this.direction = "N";
       this.x = 0;
@@ -151,13 +151,13 @@
     "%c rover.turn(), rover.move(), rover.location(), path()",
     "color: orange"
   );
-  let rows = [...(document.getElementsByClassName('row'))];
-  rows.forEach(row => {
-    let columns = row.getElementsByClassName('col');
-    columns.forEach(col => {
-      
-    })
-  });
+  // let rows = [...(document.getElementsByClassName('row'))];
+  // rows.forEach(row => {
+  //   let columns = row.getElementsByClassName('col');
+  //   columns.forEach(col => {
+
+  //   })
+  // });
   
   
  
