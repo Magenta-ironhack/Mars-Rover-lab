@@ -6,8 +6,8 @@
   align-items: center;
 }
 .game-board {
-  width: 60%;
-  height: 50vh;
+  width: 70vh;
+  height: 70vh;
   border: 1px solid black;
   border-radius: 2px;
 }
@@ -25,4 +25,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#rover {
+  height: 10vh;
+  width: 10vh;
 }
