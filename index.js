@@ -27,6 +27,13 @@ class Rover {
         console.log(`${dir} was called, rover is heading ${this.direction}.`);
       }
     }
+
+    moveRover = (x,y) => {
+      document.getElementById('rover').remove()
+      document.querySelectorAll('.row')[x].children[y].innerHTML = '<img id="rover" src="./rover.gif" alt="rover" id="rover"></img>'
+
+    }
+
     move(dir) {
       // *Directions are "f" (forward), "b" (backward).
       if (dir === "f") {
@@ -136,7 +143,8 @@ class Rover {
       }
     }
   }
-  // const mars = {};
+  const rover1 = new Rover();
+  console.log('hihihi')
   
   // function add(name) {
   //   mars[name] = new Rover(name);
@@ -155,15 +163,24 @@ class Rover {
   // let backward = document.getElementById('backward');
   // let right = document.getElementById('right');
   // let left = document.getElementById('left');
-  // let forward = 'f';
-  // let backward =
-  // let rows = [...(document.getElementsByClassName('row'))];
-  // rows.forEach(row => {
-  //   let columns = row.getElementsByClassName('col');
-  //   columns.forEach(col => {
-
-  //   })
-  // });
+  let forward = 'f';
+  let backward = 'b';
+  let right = 'r';
+  let left = 'l';
+  function roverMove(command) {
+    
+    let rows = [...(document.getElementsByClassName('row'))];
+    rows.forEach(row => {
+      let columns = row.getElementsByClassName('col');
+      columns.forEach(col => {
+  
+      })
+    });
+  }
   
   
+  
+  setInterval(()=>{
+    rover1.moveRover(Math.floor(Math.random()* 4),Math.floor(Math.random()*4))
+  }, 500)
  
