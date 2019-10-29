@@ -1,17 +1,11 @@
-class Obstacle {
-    constructor(x,y){
-        this.x = x;
-        this.y = y;
-    }
-}
+
 class Rover {
-    constructor(name) {
-        this.name = name;
-this.direction = 'N';
-this.x = 0;
-this.y = 0;
-this.travellog = [];
-    }
+    constructor() {
+        this.direction = "N";
+        this.x = 0;
+        this.y = 0;
+        this.travellog = [];
+      }
     turn(dir){
         if (dir === "r" || dir === "l") {
             // *Directions are "r" (Right), "l" (left).
@@ -34,7 +28,6 @@ this.travellog = [];
     }
     move(dir) {
          // *Directions are "f" (forward), "b" (backward).
-        
     if (dir === "f") {
         switch (this.direction) {
           case "N":
@@ -70,9 +63,10 @@ this.travellog = [];
             }
             break;
         }
-        console.log(
-          `Rover is at (x${this.x},y${this.y}) ::: Travel Log: ${this.travellog}`
-        );
+            // console.log(
+            //     `Rover is at (x${this.x},y${this.y}) ::: Travel Log: ${this.travellog}`
+            //   );
+        
       } else if (dir === "b") {
         switch (this.direction) {
           case "N":
@@ -108,19 +102,25 @@ this.travellog = [];
             }
             break;
         }
-        obstacleArray.forEach(obstacle => {
-            console.log(this.x,obstacle.x);
-            if(obstacle.x === this.x && obstacle.y === this.y) {
-                console.log('Caution - Obstacle ' + obstacle +' is in the path');
-                this.travellog.pop();
-            } else {
-                console.log(
-                    `Rover is at (x${this.x},y${this.y}) ::: Travel Log: ${this.travellog}`
-                  );
-            }
-        })
-        
+                  
       } 
+obstacleArray.forEach(obs => {
+    if(obs.x === this.x && obs.y === this.y) {
+        // this.travellog.pop();
+        // if(dir === 'f') {
+        //     this.move('r');
+            
+        //         } else {
+                    
+        //             this.move('f');
+        //         }
+        throw Error('Obstacle in your path');
+    } 
+})
+
+console.log(
+    `Rover is at (x${this.x},y${this.y}) ::: Travel Log: ${this.travellog}`
+  );
     }
     location(dir) {
         console.log(
@@ -129,21 +129,24 @@ this.travellog = [];
     }
     path(str) {
         if (str !== "" && str !== undefined) {
-            str
-              .split("")
-              .map(char => ("fb".includes(char) ? this.move(char) : this.turn(char)));
-          } else {
-            throw Error(`No path provided.`);
-          }
+          str
+            .split("")
+            .map(char => ("fb".includes(char) ? this.move(char) : this.turn(char)));
+        } else {
+          throw Error(`No path provided.`);
+        }
+      }
     }
+    const mars = {};
+
+function add(name){
+    mars[name] = new Rover(name)
 }
-const roverApollo13 = new Rover();
-const roverFalcon = new Rover();
-const roverChandhrayan = new Rover();
-const rock = new Obstacle(1,0);
-const disc = new Obstacle(2,3);
-const obstacleArray = [rock,disc];
+
+const obstacleArray = [{x:1,y:0},{x:4,y:2}];
 // const 
+
+
 // Welcome message:
 console.log("%c --- Rover available commands: ---", "color: orange");
 console.log(
