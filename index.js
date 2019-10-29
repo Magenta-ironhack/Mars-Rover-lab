@@ -1,6 +1,6 @@
-
 class Rover {
-  constructor() {
+  constructor(name) {
+    this.name = name;
     this.direction = "N";
     this.x = 0;
     this.y = 0;
@@ -120,7 +120,6 @@ class Rover {
       throw Error(`No path provided.`);
     }
   }
-
 }
 
 let obstacles = [
@@ -135,10 +134,9 @@ let obstacles = [
 
 let mars = {};
 
-function add(name){
-    mars[name] = new Rover(name)
+function add(name) {
+  mars[name] = new Rover(name);
 }
-
 
 // Welcome message:
 console.log("%c --- Rover available commands: ---", "color: orange");
