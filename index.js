@@ -136,13 +136,13 @@ class Rover {
       }
     }
   }
-  const mars = {};
+  // const mars = {};
   
-  function add(name) {
-    mars[name] = new Rover(name);
-  }
+  // function add(name) {
+  //   mars[name] = new Rover(name);
+  // }
   
-  const obstacleArray = [{ x: 1, y: 0 }, { x: 4, y: 2 }];
+  // const obstacleArray = [{ x: 1, y: 0 }, { x: 4, y: 2 }];
   // const
   
   // Welcome message:
@@ -151,6 +151,12 @@ class Rover {
     "%c rover.turn(), rover.move(), rover.location(), path()",
     "color: orange"
   );
+  // let forward = document.getElementById('forward');
+  // let backward = document.getElementById('backward');
+  // let right = document.getElementById('right');
+  // let left = document.getElementById('left');
+  // let forward = 'f';
+  // let backward =
   // let rows = [...(document.getElementsByClassName('row'))];
   // rows.forEach(row => {
   //   let columns = row.getElementsByClassName('col');
