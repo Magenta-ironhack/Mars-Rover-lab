@@ -10,6 +10,7 @@
     height: 90vh;
     border: 1px solid black;
     border-radius: 2px;
+    background-image: url('./Dao_Niger_Valles_co_xl.jpg');
 }
 .row {
     width: 100%;
