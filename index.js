@@ -1,4 +1,3 @@
-
 class Rover {
     constructor() {
         this.direction = "N";
@@ -139,8 +138,8 @@ console.log(
     }
     const mars = {};
 
-function add(name){
-    mars[name] = new Rover(name)
+function add(name) {
+  mars[name] = new Rover(name);
 }
 
 const obstacleArray = [{x:1,y:0},{x:4,y:2}];
