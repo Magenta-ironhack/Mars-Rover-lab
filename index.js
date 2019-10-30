@@ -103,18 +103,18 @@
             break;
         }
       }
-      obstacleArray.forEach(obs => {
-        if (obs.x === this.x && obs.y === this.y) {
-          // this.travellog.pop();
-          // if(dir === 'f') {
-          //     this.move('r');
+      // obstacleArray.forEach(obs => {
+      //   if (obs.x === this.x && obs.y === this.y) {
+      //     // this.travellog.pop();
+      //     // if(dir === 'f') {
+      //     //     this.move('r');
   
-          //         } else {
+      //     //         } else {
   
-          //             this.move('f');
-          //         }
-          throw Error("Obstacle in your path");
-        }
+      //     //             this.move('f');
+      //     //         }
+      //     throw Error("Obstacle in your path");
+      //   }
       });
   
       console.log(
