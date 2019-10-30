@@ -1,43 +1,91 @@
-.user-command {
-    height: 10vh;
-    width: 100%;
+body {
+  background-color: rgba(238, 197, 16, 0.87);
+}
+.instructions {
+  height: 5vh;
+  width: 20vh;
+  background-color: rgba(143, 62, 8, 0.87);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 20px;
+  border: 2px solid white;
+}
+.tools {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.button-section {
+  height: 10vh;
+  width: 20vh;
 }
 .whole-page {
-    height: 80vh;
-    width: 80vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 110vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
-
 .game-board {
-    width: 90vh;
-    height: 90vh;
-    border: 1px solid black;
-    border-radius: 2px;
+  width: 90vh;
+  height: 90vh;
+  border: 1px solid black;
+  border-radius: 2px;
+  background-image: url("./Dao_Niger_Valles_co_xl.jpg");
 }
-
 .row {
-    width: 100%;
-    height: 20%;
-    display: flex;
+  width: 100%;
+  height: 20%;
+  display: flex;
 }
-
 .col {
-    border: 1px dotted grey;
-    height: 100%;
-    width: 33%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  border: 1px dotted grey;
+  height: 100%;
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* .row:first-child > .col:first-child {
     background-image: url("./rover.gif");
     background-size: 150px;
     background-repeat: no-repeat;
 } */
-
 #rover {
-    height: 17vh;
-    width: 17vh;
+  height: 17vh;
+  width: 17vh;
+}
+.joystick {
+  height: 30vh;
+  width: 30vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 2px solid white;
+}
+.joystick button {
+  height: 5vh;
+  width: 8vh;
+  background-color: rgba(143, 62, 8, 0.87);
+  border: 2px solid white;
+  color: white;
+}
+.row-align {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 25vh;
+}
+.column-align {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 13vh;
 }

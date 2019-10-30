@@ -11,11 +11,7 @@
     <title>Mars Rover</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
-
   <body>
-    <br />
-    <br />
-    <br />
     <div class="whole-page">
       <div class="game-board">
         <div class="row row0">
@@ -27,7 +23,6 @@
           <div class="col col3"></div>
           <div class="col col4"></div>
         </div>
-
         <div class="row row1">
           <div class="col col0"></div>
           <div class="col col1"></div>
@@ -35,7 +30,6 @@
           <div class="col col3"></div>
           <div class="col col4"></div>
         </div>
-
         <div class="row row2">
           <div class="col col0"></div>
           <div class="col col1"></div>
@@ -43,7 +37,6 @@
           <div class="col col3"></div>
           <div class="col col4"></div>
         </div>
-
         <div class="row row3">
           <div class="col col0"></div>
           <div class="col col1"></div>
@@ -51,7 +44,6 @@
           <div class="col col3"></div>
           <div class="col col4"></div>
         </div>
-
         <div class="row row4">
           <div class="col col0"></div>
           <div class="col col1"></div>
@@ -60,8 +52,23 @@
           <div class="col col4"></div>
         </div>
       </div>
+      <div class="tools">
+        <div class="button-section">
+          <button class="instructions">INSTRUCTIONS</button>
+        </div>
+
+        <div class="joystick">
+          <div class="row-align">
+            <button class="left" onclick="roverMove('l')">LEFT</button>
+            <button class="right" onclick="roverMove('r')">RIGHT</button>
+          </div>
+          <div class="column-align">
+            <button class="forward" onclick="roverMove('f')">FRONT</button>
+            <button class="backward" onclick="roverMove('b')">BACK</button>
+          </div>
+        </div>
+      </div>
     </div>
-    <button onlick="move('f')">forward</button>
-    <script src="index.js"></script>
   </body>
+  <script src="index.js"></script>
 </html>
