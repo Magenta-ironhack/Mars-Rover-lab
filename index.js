@@ -1,6 +1,4 @@
-
-  
-class Rover {
+  class Rover {
     constructor() {
       this.direction = "N";
       this.x = 0;
@@ -28,11 +26,11 @@ class Rover {
       }
     }
 
-    moveRover = (x,y) => {
-      document.getElementById('rover').remove()
-      document.querySelectorAll('.row')[x].children[y].innerHTML = '<img id="rover" src="./rover.gif" alt="rover" id="rover"></img>'
+    // moveRover = (x,y) => {
+    //   document.getElementById('rover').remove()
+    //   document.querySelectorAll('.row')[x].children[y].innerHTML = '<img id="rover" src="./rover.gif" alt="rover" id="rover"></img>'
 
-    }
+    // }
 
     move(dir) {
       // *Directions are "f" (forward), "b" (backward).
@@ -110,19 +108,19 @@ class Rover {
             break;
         }
       }
-      obstacleArray.forEach(obs => {
-        if (obs.x === this.x && obs.y === this.y) {
-          // this.travellog.pop();
-          // if(dir === 'f') {
-          //     this.move('r');
+      // obstacleArray.forEach(obs => {
+      //   if (obs.x === this.x && obs.y === this.y) {
+      //     // this.travellog.pop();
+      //     // if(dir === 'f') {
+      //     //     this.move('r');
   
-          //         } else {
+      //     //         } else {
   
-          //             this.move('f');
-          //         }
-          throw Error("Obstacle in your path");
-        }
-      });
+      //     //             this.move('f');
+      //     //         }
+      //     throw Error("Obstacle in your path");
+      //   }
+      // });
   
       console.log(
         `Rover is at (x${this.x},y${this.y}) ::: Travel Log: ${this.travellog}`
@@ -159,28 +157,53 @@ class Rover {
     "%c rover.turn(), rover.move(), rover.location(), path()",
     "color: orange"
   );
-  // let forward = document.getElementById('forward');
-  // let backward = document.getElementById('backward');
-  // let right = document.getElementById('right');
-  // let left = document.getElementById('left');
-  let forward = 'f';
-  let backward = 'b';
-  let right = 'r';
-  let left = 'l';
-  function roverMove(command) {
-    
-    let rows = [...(document.getElementsByClassName('row'))];
-    rows.forEach(row => {
-      let columns = row.getElementsByClassName('col');
-      columns.forEach(col => {
+ 
+  let forward = document.getElementsByClassName('forward');
+  let backward = document.getElementsByClassName('backward');
+  let right = document.getElementsByClassName('right');
+  let left = document.getElementsByClassName('left');
   
-      })
+  window.addEventListener('keydown', function(event) {
+    switch (event.keyCode) {
+      case 37: // Left
+        roverMove('l')
+      break;
+  
+      case 38: // Up
+        roverMove('f')
+      break;
+  
+      case 39: // Right
+        roverMove('r')
+      break;
+  
+      case 40: // Down
+        roverMove('b')
+      break;
+    }
+  }, false);
+  
+  
+  function roverMove(command) {
+    rover1.path(command);
+    //rover1.x
+    let rows = [...(document.getElementsByClassName('row'))];
+    rows.forEach((row,index) => {
+      console.log(row.className);
+      if(row.className.split(' ')[1].search(rover1.x)!== -1) {
+        let columns = [...(row.getElementsByClassName('col'))];
+        columns.forEach((col,ind) => {
+    if(col.className.split(' ')[1].search(rover1.y)!== -1){
+      document.getElementById('rover').remove()
+      document.querySelectorAll('.row')[index].children[ind].innerHTML = '<img id="rover" src="./rover.gif" alt="rover" id="rover"></img>'
+    }
+        })
+      }
     });
+    
   }
   
-  
-  
-  setInterval(()=>{
-    rover1.moveRover(Math.floor(Math.random()* 4),Math.floor(Math.random()*4))
-  }, 500)
+  // setInterval(()=>{
+  //   rover1.moveRover(Math.floor(Math.random()* 4),Math.floor(Math.random()*4))
+  // }, 500)
  
